@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import { About } from './About';
 import { Home } from './Home';
 import NoteState from '../Context/notes/NoteState';
+import { Alert } from './Alert';
 
 
 
@@ -12,10 +13,11 @@ export const MainComponents = () => {
         <>
             {/* 
             <Navbar /> */}
-            <h1>iNoteBook</h1>
+      
                 <NoteState>
                     <BrowserRouter>
                         <Navbar />
+                        <Alert message={"Notes Delete"}/>
                         {/* <div> */}
                         <Routes>
                             {/* <Route path="/" element={<Home {...props} text={"Welcome"} />} />
